@@ -43,30 +43,37 @@ const AddStoryForm: React.FC<AddStoryFormProps> = ({ onAdd }) => {
   };
 
   return (
-    <div>
-      <h2>Add New Story</h2>
-      <form>
-        <label>
-          Title:
-          <input
-            type="text"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-        </label>
-        <br />
-        <label>
-          Content:
-          <textarea
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-          />
-        </label>
-        <br />
-        <button type="button" onClick={handleAddStory}>
-          Add Story
-        </button>
-      </form>
+    <div className="m-6 flex items-center justify-center">
+      {/* Set full prop to make it cover the entire page */}
+      <div className="bg-white rounded-md p-8">
+        <h2 className="text-black text-2xl font-bold mb-4">Add New Story</h2>
+        <form>
+          <label className="text-black mb-4 block">
+            Title:
+            <input
+              className="border rounded-md p-2 w-full"
+              type="text"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+          </label>
+          <label className=" text-black mb-4 block">
+            Content:
+            <textarea
+              className="border rounded-md p-2 w-full"
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+            />
+          </label>
+          <button
+            className="bg-purple-500 text-white font-semibold rounded-md py-2 px-4"
+            type="button"
+            onClick={handleAddStory}
+          >
+            Add Story
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
