@@ -17,7 +17,7 @@ interface AddStoryFormProps {
   onAdd: () => void;
 }
 
-const AddStoryForm: React.FC<AddStoryFormProps> = ({ onAdd }) => {
+const AddStory: React.FC<AddStoryFormProps> = ({ onAdd }) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
@@ -78,4 +78,4 @@ const AddStoryForm: React.FC<AddStoryFormProps> = ({ onAdd }) => {
   );
 };
 
-export default AddStoryForm;
+export default AddStory;

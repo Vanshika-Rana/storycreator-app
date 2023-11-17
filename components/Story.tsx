@@ -62,7 +62,7 @@ const Story: React.FC<StoryProps> = ({ story, onEdit }) => {
     {/* Button to trigger editing */}
     {!isEditing && (
       <button className="bg-gray-700 hover:bg-gray-900 text-white font-normal py-2 px-6 rounded-full transition duration-300" onClick={() => setIsEditing(true)}>
-        Continue adding to story ... 
+        Continue  ... 
       </button>
     )}
   </div>
